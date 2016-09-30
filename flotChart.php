@@ -26,6 +26,11 @@ $allResults = $statement->fetchAll (PDO::FETCH_NUM); // ( PDO::FETCH_ASSOC );
 $(function() {
 
 	var d1 = <?php echo json_encode($allResults);?>;
+	xaxis:
+    {
+        mode: 'time',
+        timeformat: "%y-%m-%d %h:%m:%s"
+    }
 	
 	$.plot("#placeholder", [ d1 ]);
 
