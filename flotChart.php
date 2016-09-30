@@ -19,20 +19,23 @@ $query = "SELECT timestamp, value FROM agriot_productive.`values` JOIN sensors O
 $statement = $db->prepare ( $query );
 $statement->bindParam ( ':id', $_GET ["id"] );
 $statement->execute ();
-$allResults = $statement->fetchAll (PDO::FETCH_NUM); // ( PDO::FETCH_ASSOC );
+$allResults = $statement->fetchAll ( PDO::FETCH_NUM ); // ( PDO::FETCH_ASSOC );
 
 ?>
 
 $(function() {
 
 	var d1 = <?php echo json_encode($allResults);?>;
-	xaxis:
-    {
-        mode: 'time',
-        timeformat: "%y-%m-%d %h:%m:%s"
-    }
+	var opts = { 
+		    xaxis: {
+		        mode: "time",
+		        timeformat: "%Y/%m/%d"
+		    }
+		};
+
+		
 	
-	$.plot("#placeholder", [ d1 ]);
+	$.plot("#placeholder", [ d1 ], opts);
 
 	// Add the Flot version string to the footer
 
