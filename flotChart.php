@@ -9,20 +9,22 @@
 <script language="javascript" type="text/javascript" src="./flot/jquery.flot.js"></script>
 <script type="text/javascript">
 
+<?php 
+require 'dbConnect.php';
+
+$query = "SELECT timestamp, value FROM agriot_productive.`values` JOIN sensors ON values.sensorId=sensors.id JOIN users ON sensors.ownerId = users.id WHERE users.id = :id AND values.timestamp > '2016-09-01 03:25:43' ORDER BY values.timestamp";
+$statement = $db->prepare ( $query );
+$statement->bindParam ( ':id', $_GET ["id"] );
+$statement->execute ();
+$allResults = $statement->fetchAll();// ( PDO::FETCH_ASSOC );
+
+?>
+
 $(function() {
 
-	var d1 = [];
-	for (var i = 0; i < 14; i += 0.5) {
-		d1.push([i, Math.sin(i)]);
-	}
-
-	var d2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
-
-	// A null signifies separate line segments
-
-	var d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
-
-	$.plot("#placeholder", [ d1, d2, d3 ]);
+	var d1 = <?php echo json_encode($allResults);?>;
+	
+	$.plot("#placeholder", [ d1 ]);
 
 	// Add the Flot version string to the footer
 
