@@ -19,7 +19,7 @@ $query = "SELECT timestamp, value FROM agriot_productive.`values` JOIN sensors O
 $statement = $db->prepare ( $query );
 $statement->bindParam ( ':id', $_GET ["id"] );
 $statement->execute ();
-$allResults = $statement->fetchAll (PDO::FETCH_COLUMN); // ( PDO::FETCH_ASSOC );
+$allResults = $statement->fetchAll (PDO::FETCH_NUM); // ( PDO::FETCH_ASSOC );
 
 ?>
 
