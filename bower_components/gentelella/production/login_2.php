@@ -2,15 +2,14 @@
 session_start ();
 require_once ("../../../dbConnect.php");
 
-print_r ($_GET);
-print_r ($_POST);
-print_r ($_SESSION);
-
+print_r ( $_GET );
+print_r ( $_POST );
+print_r ( $_SESSION );
 
 $error_msg = "";
-if (isset ( $_GET ['email'] ) && isset ( $_GET ['password'] )) {
-	$email = $_GET ['email'];
-	$password = $_GET ['password'];
+if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
+	$email = $_POST ['email'];
+	$password = $_POST ['password'];
 	
 	$statement = $db->prepare ( "SELECT * FROM users WHERE email = :email" );
 	$result = $statement->execute ( array (
@@ -67,8 +66,10 @@ if (isset ( $error_msg ) && ! empty ( $error_msg )) {
 		<div class="login_wrapper">
 			<div class="animate form login_form">
 				<section class="login_content">
-					<form action="login_2.php" methode="post">
+					<form action="login_2.php" method="post">
 						<h1>Login Form</h1>
+
+						<!-- 						
 						<div>
 							<input type="email" maxlength="255" class="form-control"
 								placeholder="Email-Adresse" name="email" required="" />
@@ -102,6 +103,20 @@ if (isset ( $error_msg ) && ! empty ( $error_msg )) {
 									3 template. Privacy and Terms</p>
 							</div>
 						</div>
+						 -->
+						<label for="inputEmail" class="sr-only">E-Mail</label> <input
+							type="email" name="email" id="inputEmail" class="form-control"
+							placeholder="E-Mail" value="<?php echo $email_value; ?>" required
+							autofocus> <label for="inputPassword" class="sr-only">Password</label>
+						<input type="password" name="password" id="inputPassword"
+							class="form-control" placeholder="Passwort" required>
+						<div class="checkbox">
+							<label> <input type="checkbox" value="remember-me"
+								name="angemeldet_bleiben" value="1" checked> Angemeldet bleiben
+							</label>
+						</div>
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+						<br> <a href="passwortvergessen.php">Passwort vergessen</a>
 					</form>
 				</section>
 			</div>
