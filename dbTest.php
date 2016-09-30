@@ -9,14 +9,13 @@ $id = 3;
 
 $statement->execute ();
 
-$allResults = $statement->fetchAll ();// PDO::FETCH_ASSOC );
+$allResults = $statement->fetchAll ( PDO::FETCH_ASSOC );
 
 print "<pre>";
 
-
 print_r ( $allResults );
 
-echo $allResults [0]['id'];
+echo $allResults [0] ['firstName'];
 
 print "</pre>";
 
