@@ -54,11 +54,6 @@ if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
 </head>
 
 <body class="login">
-<?php
-if (isset ( $error_msg ) && ! empty ( $error_msg )) {
-	echo $error_msg;
-}
-?>
 	<div>
 		<a class="hiddenanchor" id="signup"></a> <a class="hiddenanchor"
 			id="signin"></a>
@@ -68,20 +63,34 @@ if (isset ( $error_msg ) && ! empty ( $error_msg )) {
 				<section class="login_content">
 					<form action="login_2.php" method="post">
 						<h1>Login Form</h1>
-
+						<?php
+						if (isset ( $error_msg ) && ! empty ( $error_msg )) {
+							echo $error_msg;
+						}
 											
 						<div>
-							<input type="email" maxlength="255" class="form-control"
-								placeholder="Email-Adresse" name="email" required="" />
+							<input type="email" name="email" id="inputEmail" maxlength="255" class="form-control"
+								placeholder="Email-Adresse" value="<?php echo $email_value; ?>" required autofocus />
 						</div>
 						<div>
-							<input type="password" class="form-control"
-								placeholder="Password" required="" name="password" />
+							<input type="password"  name="password" id=inputPassword class="form-control" 
+								placeholder="Passwort" required />
 						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="remember-me" name="angemeldet_bleiben" value="1" checked> Angemeldet bleiben
+							</label>
+						</div>
+						
 						<div>
-							<input type="submit" value="Login"> <a
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+							
+							
+							<!-- <input type="submit" value="Login"> <a
 								class="btn btn-default submit" href="index.html">Log in</a> <a
 								class="reset_pass" href="#">Lost your password?</a>
+							-->	
+								
 						</div>
 
 						<div class="clearfix"></div>
