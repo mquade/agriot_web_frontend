@@ -13,7 +13,7 @@ $allResults = $statement->fetchAll ();
 
 //print_r ( $allResults );
 
-echo $allResults[1];
+echo $allResults['id'];
 
 // $db->prepare("SELECT * FROM agriot_productive.users WHERE id = :id");
 // $db->exec(array(":id" => $_GET["id"]));
