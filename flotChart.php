@@ -29,7 +29,7 @@ $(function() {
 
 		
 	
-	$.plot("#placeholder", [ d1 ], opts);
+	$.plot("#placeholder", [ d1 ]);
 
 	// Add the Flot version string to the footer
 
