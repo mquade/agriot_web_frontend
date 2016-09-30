@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Flot Examples: Basic Usage</title>
-<link href="./flot/examples.css" rel="stylesheet" type="text/css">
+<link href="./flot/examples/examples.css" rel="stylesheet" type="text/css">
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="./flot/excanvas.min.js"></script><![endif]-->
 <script language="javascript" type="text/javascript" src="./flot/jquery.js"></script>
 <script language="javascript" type="text/javascript" src="./flot/jquery.flot.js"></script>
