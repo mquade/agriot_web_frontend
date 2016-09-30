@@ -1,7 +1,7 @@
 <?php
 require 'dbConnect.php';
 
-$query = 'SELECT * FROM agriot_productive.users WHERE id = :id';
+$query = 'SELECT * FROM agriot_productive.users WHERE id <= :id';
 $statement = $db->prepare ( $query );
 $statement->bindParam ( ':id', $id );
 
@@ -9,11 +9,11 @@ $id = 3;
 
 $statement->execute ();
 
-$allResults = $statement->fetchAll(PDO::FETCH_ASSOC);
+$allResults = $statement->fetchAll ();// PDO::FETCH_ASSOC );
 
 print_r ( $allResults );
 
-echo $allResults['id'];
+echo $allResults [id];
 
 // $db->prepare("SELECT * FROM agriot_productive.users WHERE id = :id");
 // $db->exec(array(":id" => $_GET["id"]));
