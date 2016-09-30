@@ -3,7 +3,7 @@ session_start();
 require '../../../dbConnect.php';
 
 echo "foo";
-print_r $_GET;
+print_r ($_GET);
 
 if(isset($_GET['login'])) {
 	$email = $_POST['email'];
