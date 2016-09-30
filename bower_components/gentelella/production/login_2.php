@@ -13,11 +13,11 @@ if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
 			'email' => $email 
 	) );
 	$user = $statement->fetch ();
-	// Überprüfung des Passworts
+	// ï¿½berprï¿½fung des Passworts
 	if ($user !== false && password_verify ( $password, $user ['passwordHashed'] )) {
 		$_SESSION ['userid'] = $user ['id'];
 	} else {
-		$error_msg = "E-Mail oder Passwort war ungültig<br><br>";
+		$error_msg = "E-Mail oder Passwort war ungÃ¼ltig<br><br>";
 	}
 }
 
