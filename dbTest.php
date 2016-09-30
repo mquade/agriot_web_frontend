@@ -16,7 +16,7 @@ print "<pre>";
 
 print_r ( $allResults );
 
-echo $allResults [id];
+echo $allResults [0]['id'];
 
 print "</pre>";
 
