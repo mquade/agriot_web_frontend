@@ -24,6 +24,7 @@ if(isset($_GET['login'])) {
 }
 else {
 	echo "no Login";
+}
 
 ?>
 
