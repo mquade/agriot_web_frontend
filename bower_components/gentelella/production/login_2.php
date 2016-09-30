@@ -2,9 +2,6 @@
 session_start ();
 require_once ("../../../dbConnect.php");
 
-print_r ( $_GET );
-print_r ( $_POST );
-print_r ( $_SESSION );
 
 $error_msg = "";
 if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
