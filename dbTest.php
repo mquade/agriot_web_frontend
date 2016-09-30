@@ -11,9 +11,9 @@ $statement->execute ();
 
 $allResults = $statement->fetchAll ();
 
-print_r ( $allResults );
+//print_r ( $allResults );
 
-// echo $statement [2];
+echo $allResults[1];
 
 // $db->prepare("SELECT * FROM agriot_productive.users WHERE id = :id");
 // $db->exec(array(":id" => $_GET["id"]));
