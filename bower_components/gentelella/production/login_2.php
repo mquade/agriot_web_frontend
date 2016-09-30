@@ -99,6 +99,8 @@ if (isset ( $_POST ['email'] ))
 
 						<div class="clearfix"></div>
 
+		
+
 						<div class="separator">
 							<p class="change_link">
 								New to site? <a href="#signup" class="to_register"> Create
