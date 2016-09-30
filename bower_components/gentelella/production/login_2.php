@@ -24,12 +24,14 @@ if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
 	}
 }
 
+$email_value = "";
+if (isset ( $_POST ['email'] ))
+	$email_value = htmlentities ( $_POST ['email'] );
 ?>
 
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Meta, title, CSS, favicons, etc. -->
@@ -70,28 +72,29 @@ if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
 						?>
 											
 						<div>
-							<input type="email" name="email" id="inputEmail" maxlength="255" class="form-control"
-								placeholder="Email-Adresse" value="<?php echo $email_value; ?>" required autofocus />
+							<input type="email" name="email" id="inputEmail" maxlength="255"
+								class="form-control" placeholder="Email-Adresse"
+								value="<?php echo $email_value; ?>" required autofocus />
 						</div>
 						<div>
-							<input type="password"  name="password" id=inputPassword class="form-control" 
-								placeholder="Passwort" required />
+							<input type="password" name="password" id=inputPassword
+								class="form-control" placeholder="Passwort" required />
 						</div>
 						<div class="checkbox">
-							<label>
-								<input type="checkbox" value="remember-me" name="angemeldet_bleiben" value="1" checked> Angemeldet bleiben
+							<label> <input type="checkbox" value="remember-me"
+								name="angemeldet_bleiben" value="1" checked> Angemeldet bleiben
 							</label>
 						</div>
-						
+
 						<div>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-							
-							
+							<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+
+
 							<!-- <input type="submit" value="Login"> <a
 								class="btn btn-default submit" href="index.html">Log in</a> <a
 								class="reset_pass" href="#">Lost your password?</a>
-							-->	
-								
+							-->
+
 						</div>
 
 						<div class="clearfix"></div>
@@ -113,7 +116,7 @@ if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
 									3 template. Privacy and Terms</p>
 							</div>
 						</div>
-						
+
 					</form>
 				</section>
 			</div>
