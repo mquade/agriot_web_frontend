@@ -69,7 +69,7 @@ if(isset($errorMessage)) {
 		<div class="login_wrapper">
 			<div class="animate form login_form">
 				<section class="login_content">
-					<form action="?login=1" methode="post">
+					<form action="?login=1" methode="get">
 						<h1>Login Form</h1>
 						<div>
 							<input type="email" maxlength="255" class="form-control" placeholder="Email-Adresse" name="email"
