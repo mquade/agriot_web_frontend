@@ -15,7 +15,7 @@
 <?php
 require 'dbConnect.php';
 
-$query = "SELECT id, value FROM agriot_productive.`values` JOIN sensors ON values.sensorId=sensors.id JOIN users ON sensors.ownerId = users.id WHERE users.id = :id AND values.timestamp > '2016-09-01 03:25:43' ORDER BY values.timestamp";
+$query = "SELECT values.id, value FROM agriot_productive.`values` JOIN sensors ON values.sensorId=sensors.id JOIN users ON sensors.ownerId = users.id WHERE users.id = :id AND values.timestamp > '2016-09-01 03:25:43' ORDER BY values.timestamp";
 $statement = $db->prepare ( $query );
 $statement->bindParam ( ':id', $_GET ["id"] );
 $statement->execute ();
