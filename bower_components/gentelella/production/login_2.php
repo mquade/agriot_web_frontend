@@ -67,6 +67,7 @@ if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
 						if (isset ( $error_msg ) && ! empty ( $error_msg )) {
 							echo $error_msg;
 						}
+						?>
 											
 						<div>
 							<input type="email" name="email" id="inputEmail" maxlength="255" class="form-control"
