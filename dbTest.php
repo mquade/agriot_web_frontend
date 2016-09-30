@@ -1,7 +1,7 @@
 <?php
 require 'dbConnect.php';
 
-$query = 'SELECT * FROM agriot_productive.users WHERE id <= :id';
+$query = 'SELECT * FROM agriot_productive.users WHERE id = :id';
 $statement = $db->prepare ( $query );
 $statement->bindParam ( ':id', $_GET ["id"] );
 
