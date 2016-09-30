@@ -29,9 +29,9 @@ $(function() {
 	var opts = { 
 		    xaxis: {
 		        mode: "time",
-		        timeformat: "%Y/%m/%d"
+		        timeformat: "%Y-%m-%d %h:%m:%s"
 		    }
-		};
+    };
 
 		
 	
