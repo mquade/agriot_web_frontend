@@ -11,9 +11,14 @@ $statement->execute ();
 
 $allResults = $statement->fetchAll ();// PDO::FETCH_ASSOC );
 
+print "<pre>";
+
+
 print_r ( $allResults );
 
 echo $allResults [id];
+
+print "</pre>";
 
 // $db->prepare("SELECT * FROM agriot_productive.users WHERE id = :id");
 // $db->exec(array(":id" => $_GET["id"]));
