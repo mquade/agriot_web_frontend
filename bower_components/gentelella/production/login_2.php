@@ -16,6 +16,8 @@ if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
 	// �berpr�fung des Passworts
 	if ($user !== false && password_verify ( $password, $user ['passwordHashed'] )) {
 		$_SESSION ['userid'] = $user ['id'];
+		header("location: index.php");
+		exit;
 	} else {
 		$error_msg = "E-Mail oder Passwort war ungültig<br><br>";
 	}
