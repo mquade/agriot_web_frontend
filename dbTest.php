@@ -9,11 +9,11 @@ $id = 3;
 
 $statement->execute ();
 
-$allResults = $statement->fetchAll ();
+$allResults = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-//print_r ( $allResults );
+print_r ( $allResults );
 
-echo $allResults['id'];
+//echo $allResults['id'];
 
 // $db->prepare("SELECT * FROM agriot_productive.users WHERE id = :id");
 // $db->exec(array(":id" => $_GET["id"]));
