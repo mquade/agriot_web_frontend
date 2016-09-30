@@ -72,7 +72,7 @@ if (isset ( $_POST ['email'] ))
 						
 						if (isset ( $_SESSION ['userid'] )) {
 							echo "Angemeldet mit ID" . $_SESSION ['userid'];
-							echo '<button class="btn btn-lg btn-primary btn-block" type="submit" href="logout.php">Logout</button>';
+							echo '<a class="btn btn-lg btn-primary btn-block" type="submit" href="logout.php">Logout</a>';
 						}
 						?>
 											
