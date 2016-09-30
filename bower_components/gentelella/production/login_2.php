@@ -69,7 +69,7 @@ if (isset ( $error_msg ) && ! empty ( $error_msg )) {
 					<form action="login_2.php" method="post">
 						<h1>Login Form</h1>
 
-						<!-- 						
+											
 						<div>
 							<input type="email" maxlength="255" class="form-control"
 								placeholder="Email-Adresse" name="email" required="" />
@@ -103,20 +103,7 @@ if (isset ( $error_msg ) && ! empty ( $error_msg )) {
 									3 template. Privacy and Terms</p>
 							</div>
 						</div>
-						 -->
-						<label for="inputEmail" class="sr-only">E-Mail</label> <input
-							type="email" name="email" id="inputEmail" class="form-control"
-							placeholder="E-Mail" value="<?php echo $email_value; ?>" required
-							autofocus> <label for="inputPassword" class="sr-only">Password</label>
-						<input type="password" name="password" id="inputPassword"
-							class="form-control" placeholder="Passwort" required>
-						<div class="checkbox">
-							<label> <input type="checkbox" value="remember-me"
-								name="angemeldet_bleiben" value="1" checked> Angemeldet bleiben
-							</label>
-						</div>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-						<br> <a href="passwortvergessen.php">Passwort vergessen</a>
+						
 					</form>
 				</section>
 			</div>
