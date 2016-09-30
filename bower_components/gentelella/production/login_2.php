@@ -18,7 +18,7 @@ if (isset ( $_GET ['email'] ) && isset ( $_GET ['password'] )) {
 	) );
 	$user = $statement->fetch ();
 	// Überprüfung des Passworts
-	if ($user !== false && password_verify ( $password, $user ['password'] )) {
+	if ($user !== false && password_verify ( $password, $user ['passwordHashed'] )) {
 		$_SESSION ['userid'] = $user ['id'];
 	} else {
 		$error_msg = "E-Mail oder Passwort war ungültig<br><br>";
