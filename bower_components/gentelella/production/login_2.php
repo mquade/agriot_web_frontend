@@ -8,9 +8,9 @@ print_r ($_SESSION);
 
 
 $error_msg = "";
-if (isset ( $_POST ['email'] ) && isset ( $_POST ['password'] )) {
-	$email = $_POST ['email'];
-	$password = $_POST ['password'];
+if (isset ( $_GET ['email'] ) && isset ( $_GET ['password'] )) {
+	$email = $_GET ['email'];
+	$password = $_GET ['password'];
 	
 	$statement = $db->prepare ( "SELECT * FROM users WHERE email = :email" );
 	$result = $statement->execute ( array (
