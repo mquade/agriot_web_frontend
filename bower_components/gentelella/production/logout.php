@@ -8,5 +8,5 @@ setcookie ( "securitytoken", "", time () - (3600 * 24 * 365) );
 ?>
 
 <div class="container main-container">
-	Der Logout war erfolgreich. <a href="login_2.php">Zurück zum Login</a>.
+	Der Logout war erfolgreich. <a href="login_2.php">ZurÃ¼ck zum Login</a>.
 </div>
