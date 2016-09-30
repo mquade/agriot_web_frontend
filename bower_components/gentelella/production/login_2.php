@@ -69,6 +69,11 @@ if (isset ( $_POST ['email'] ))
 						if (isset ( $error_msg ) && ! empty ( $error_msg )) {
 							echo $error_msg;
 						}
+						
+						if (isset ( $_SESSION ['userid'] )) {
+							echo "Angemeldet mit ID" . $_SESSION ['userid'];
+							echo '<button class="btn btn-lg btn-primary btn-block" type="submit" href="logout.php">Logout</button>';
+						}
 						?>
 											
 						<div>
@@ -91,15 +96,16 @@ if (isset ( $_POST ['email'] ))
 
 
 							<!-- <input type="submit" value="Login"> <a
-								class="btn btn-default submit" href="index.html">Log in</a> <a
-								class="reset_pass" href="#">Lost your password?</a>
+								class="btn btn-default submit" href="index.html">Log in</a>
 							-->
+							<a class="reset_pass" href="#">Lost your password?</a>
+
 
 						</div>
 
 						<div class="clearfix"></div>
 
-		
+
 
 						<div class="separator">
 							<p class="change_link">
