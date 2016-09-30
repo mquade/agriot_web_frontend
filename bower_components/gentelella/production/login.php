@@ -2,6 +2,7 @@
 session_start();
 require '../../../dbConnect.php';
 
+echo "foo";
 if(isset($_GET['login'])) {
 	$email = $_POST['email'];
 	$passwort = $_POST['passwort'];
